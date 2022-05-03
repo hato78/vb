@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>v-BiS</title>
+    <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <div class="title-container">
+            <div>
+                <h3 class="title">
+                    v-BiS
+                </h3>
+            </div>
+            <div class="members">
+                <div class="member bis" v-bind:class="{ active: memberFilter === 'BiS' }"
+                    v-on:click="setMember('BiS')">BiS</div>
+                <div class="member ito" v-bind:class="{ active: memberFilter === 'MUSENSiTEEBU' }"
+                    v-on:click="setMember('MUSENSiTEEBU')">&#129429; MUSENSiTEEBU &#129429;</div>
+                <!--クリックでtabをactive-->
+                <div class="member chamo" v-bind:class="{ active: memberFilter === 'CHANTMONKEE' }"
+                    v-on:click="setMember('CHANTMONKEE')">&#128053; CHANTMONKEE &#128053;</div>
+                <div class="member neo" v-bind:class="{ active: memberFilter === 'NEOTREES' }"
+                    v-on:click="setMember('NEOTREES')">&#127794; NEOTREES &#127794;</div>
+                <div class="member toggy" v-bind:class="{ active: memberFilter === 'TOGGY' }"
+                    v-on:click="setMember('TOGGY')">&#128118; TOGGY &#128118;</div>
+                <div class="member nano" v-bind:class="{ active: memberFilter === 'NANO3' }"
+                    v-on:click="setMember('NANO3')">&#127799; NANO3 &#127799;</div>
+                <div class="member insta">
+                    <a href="#instagram">&#128247; DESiGN &#x1f6d2;</a>
+                </div>
+            </div>
+        </div>
+
+        <transition-group class="projects" name="projects">
+            <div class="project" v-if="memberFilter === project.category || memberFilter === 'BiS'"
+                v-bind:key="project.title" v-for="project in projects">
+                <div class="project-image-wrapper">
+                    <img class="project-image" v-bind:src="project.image">
+                    <div class="gradient-overlay"></div>
+                </div>
+            </div>
+        </transition-group>
+    </div>
+    <div id="instagram">
+        <!-- LightWidget WIDGET --><script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script><iframe src="http://lightwidget.com/widgets/9da1000539845900b3c54d77973f5ef6.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width:100%;border:0;overflow:hidden;"></iframe>
+    </div>
+    <footer>
+
+    </footer>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                memberFilter: 'BiS',//初期表示
+                projects: [
+                    { title:"",image: "https://picsum.photos/g/200?image=122", category: 'TOGGY' },
+                    { title:"", image: "https://picsum.photos/g/200?image=116", category: 'NANO3' },
+                    { title: "Sketching", image: "https://picsum.photos/g/200?image=121", category: 'NEOTREES' },
+                    { title: "Acrillic", image: "https://picsum.photos/g/200?image=133", category: 'NEOTREES' },
+                    { title: "Pencil", image: "https://picsum.photos/g/200?image=134", category: 'CHANTMONKEE' },
+                    { title: "Pen", image: "https://picsum.photos/g/200?image=115", category: 'CHANTMONKEE' },
+                    { title: "Inking", image: "https://picsum.photos/g/200", category: 'TOGGY' },
+                ]
+            },
+            methods: {
+                setMember: function (member) {
+                    this.memberFilter = member;
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>
