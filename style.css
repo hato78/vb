@@ -1,0 +1,84 @@
+.body {
+  margin: 0;
+  padding: 0;
+}
+
+.projects {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.project-image-wrapper img {
+  width: 300px;
+  height: auto;
+  padding: 1px;
+}
+
+.members {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.members .member {
+  text-align: center;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin: 7px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.members .bis {
+  background-image: -webkit-gradient(linear, left top, right top, from(#000000), to(#3f3f3f));
+  background-image: linear-gradient(to right, #000000 0%, #3f3f3f 100%);
+}
+
+.members .ito {
+  background-image: -webkit-gradient(linear, left top, right top, from(#8000bb), to(#a66dec));
+  background-image: linear-gradient(to right, #8000bb 0%, #a66dec 100%);
+}
+
+.members .chamo {
+  background-image: -webkit-gradient(linear, left top, right top, from(#0867ff), to(#00c6fb));
+  background-image: linear-gradient(to right, #0867ff 0%, #00c6fb 100%);
+}
+
+.members .neo {
+  background-image: -webkit-gradient(linear, left top, right top, from(#0ba360), to(#3cba92));
+  background-image: linear-gradient(to right, #0ba360 0%, #3cba92 100%);
+}
+
+.members .toggy {
+  background-image: -webkit-gradient(linear, left top, right top, from(#ff0844), to(#ff764d));
+  background-image: linear-gradient(to right, #ff0844 0%, #ff764d 100%);
+}
+
+.members .nano {
+  background-image: -webkit-gradient(linear, left top, right top, from(#ff6600), to(#ffaf40));
+  background-image: linear-gradient(to right, #ff6600 0%, #ffaf40 100%);
+}
+
+.members .insta {
+  background-image: -webkit-gradient(linear, left top, right top, from(#d57eeb), to(#fccb90));
+  background-image: linear-gradient(to right, #d57eeb 0%, #fccb90 100%);
+}
+
+.members .insta a {
+  text-decoration: none;
+  color: white;
+}
+/*# sourceMappingURL=style.css.map */
