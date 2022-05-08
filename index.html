@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 
 <head>
     <meta charset="UTF-8">
@@ -7,20 +7,22 @@
     <title>v-BiS</title>
     <link href="style.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
 </head>
-
+<script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
 <body>
     <div id="app">
         <div class="title-container">
             <div>
                 <h1 class="title">
-                   <img src="logo.jpg"> 
-                </h3>
+                    <img src="logo.jpg">
+                    </h3>
             </div>
             <div class="members">
-                <div class="member bis" v-bind:class="{ active: memberFilter === 'BiS' }"
-                    v-on:click="setMember('BiS')">BiS</div>
+                <div class="member bis" v-bind:class="{ active: memberFilter === 'BiS' }" v-on:click="setMember('BiS')">
+                    BiS</div>
                 <div class="member ito" v-bind:class="{ active: memberFilter === 'MUSENSiTEEBU' }"
                     v-on:click="setMember('MUSENSiTEEBU')">&#129429; MUSENSiTEEBU &#129429;</div>
                 <!--クリックでtabをactive-->
@@ -37,7 +39,6 @@
                 </div>
             </div>
         </div>
-
         <transition-group class="projects" name="projects">
             <div class="project" v-if="memberFilter === project.category || memberFilter === 'BiS'"
                 v-bind:key="project.title" v-for="project in projects">
@@ -49,11 +50,14 @@
         </transition-group>
     </div>
     <div id="instagram">
-        <img src="instagram.png">
-        <!-- LightWidget WIDGET --><script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script><iframe src="https://cdn.lightwidget.com/widgets/9da1000539845900b3c54d77973f5ef6.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width:100%;border:0;overflow:hidden;"></iframe>
+        <a href=""><img src="instagram.png"></a>
+        <!-- LightWidget WIDGET -->
+        <script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script><iframe
+            src="https://cdn.lightwidget.com/widgets/9da1000539845900b3c54d77973f5ef6.html" scrolling="no"
+            allowtransparency="true" class="lightwidget-widget" style="width:100%;border:0;overflow:hidden;"></iframe>
     </div>
     <footer>
-
+        ©2022 v-BiS
     </footer>
     <script>
         new Vue({
@@ -61,8 +65,8 @@
             data: {
                 memberFilter: 'BiS',//初期表示
                 projects: [
-                    { title:"",image: "https://raw.githubusercontent.com/hato78/vb/main/mon1.jpg", category: 'CHANTMONKEE' },
-                    { title:"", image: "https://raw.githubusercontent.com/hato78/vb/main/nano1.jpg", category: 'NANO3' },
+                    { title: "", image: "https://raw.githubusercontent.com/hato78/vb/main/mon1.jpg", category: 'CHANTMONKEE' },
+                    { title: "", image: "https://raw.githubusercontent.com/hato78/vb/main/nano1.jpg", category: 'NANO3' },
                     { title: "Sketching", image: "https://raw.githubusercontent.com/hato78/vb/main/neo1.jpg", category: 'NEOTREES' },
                     { title: "Acrillic", image: "https://raw.githubusercontent.com/hato78/vb/main/mon2.jpg", category: 'CHANTMONKEE' },
                     { title: "Pencil", image: "https://picsum.photos/g/200?image=134", category: 'CHANTMONKEE' },

@@ -1,6 +1,7 @@
-.body {
+body {
   margin: 0;
   padding: 0;
+  font-family: 'Patrick Hand', cursive;
 }
 
 .title {
@@ -11,6 +12,11 @@
 
 .title img {
   width: 200px;
+}
+
+.project {
+  -webkit-transition: all .35s ease-in-out;
+  transition: all .35s ease-in-out;
 }
 
 .projects {
@@ -28,6 +34,23 @@
   width: auto;
   height: 400px;
   padding: 1px;
+}
+
+.projects-enter {
+  -webkit-transform: scale(0.5) translatey(-80px);
+          transform: scale(0.5) translatey(-80px);
+  opacity: 0;
+}
+
+.projects-leave-to {
+  -webkit-transform: translatey(30px);
+          transform: translatey(30px);
+  opacity: 0;
+}
+
+.projects-leave-active {
+  position: absolute;
+  z-index: -1;
 }
 
 .members {
@@ -90,6 +113,20 @@
 .members .insta a {
   text-decoration: none;
   color: white;
+}
+
+#instagram {
+  margin-top: 30px;
+  text-align: center;
+}
+
+#instagram img {
+  width: 30px;
+}
+
+footer {
+  text-align: center;
+  font-size: 10px;
 }
 
 @media screen and (max-width: 400px) {
