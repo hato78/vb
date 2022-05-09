@@ -6,8 +6,8 @@ body {
 
 .title {
   text-align: center;
-  margin-top: -40px;
-  margin-bottom: -53px;
+  margin-top: -30px;
+  margin-bottom: -72px;
 }
 
 .title img {
@@ -126,7 +126,7 @@ body {
 
 footer {
   text-align: center;
-  font-size: 10px;
+  font-size: 14px;
 }
 
 @media screen and (max-width: 400px) {
