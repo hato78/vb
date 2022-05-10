@@ -4,14 +4,21 @@ body {
   font-family: 'Patrick Hand', cursive;
 }
 
+h1 {
+  margin: 0;
+}
+
 .title {
   text-align: center;
-  margin-top: -30px;
-  margin-bottom: -72px;
+  border-bottom: green 2px dotted;
 }
 
 .title img {
   width: 200px;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  -webkit-filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.2));
+          filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.2));
 }
 
 .project {
@@ -62,6 +69,9 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.2));
+          filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.2));
+  margin-top: 14px;
 }
 
 .members .member {
@@ -116,8 +126,13 @@ body {
 }
 
 #instagram {
-  margin-top: 30px;
   text-align: center;
+  margin-top: 20px;
+}
+
+#instagram iframe {
+  -webkit-filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.2));
+          filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.2));
 }
 
 #instagram img {
