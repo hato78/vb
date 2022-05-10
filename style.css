@@ -148,8 +148,11 @@ footer {
   .title img {
     width: 120px;
   }
+  .project-image-wrapper {
+    text-align: center;
+  }
   .project-image-wrapper img {
-    width: 100% !important;
+    width: 96% !important;
     height: auto;
   }
 }
