@@ -149,7 +149,7 @@ footer {
     width: 150px;
   }
   .project-image-wrapper img {
-    width: 300px !important;
+    width: 100% !important;
     height: auto;
   }
 }
