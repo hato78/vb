@@ -16,11 +16,12 @@
 <body>
     <div id="app">
         <div class="title-container">
-                <div>
-                    <h1 class="title">
-                        <img src="logo.png">
-                        </h3>
-                </div>   
+            <div>
+                <h1 class="title">
+                    <img src="logo.png">
+                    </h3>
+            </div>
+            <transition appear name="instagram">
                 <div id="instagram">
                     <!-- LightWidget WIDGET -->
                     <script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script><iframe
@@ -28,20 +29,34 @@
                         allowtransparency="true" class="lightwidget-widget"
                         style="width:100%;border:0;overflow:hidden;"></iframe>
                 </div>
+            </transition>
             <div class="members">
-                <div class="member bis" v-bind:class="{ active: memberFilter === 'BiS' }" v-on:click="setMember('BiS')">
-                    BiS</div>
-                <div class="member ito" v-bind:class="{ active: memberFilter === 'MUSENSiTEEBU' }"
-                    v-on:click="setMember('MUSENSiTEEBU')">&#129429; MUSENSiTEEBU &#129429;</div>
-                <!--クリックでtabをactive-->
-                <div class="member chamo" v-bind:class="{ active: memberFilter === 'CHANTMONKEE' }"
-                    v-on:click="setMember('CHANTMONKEE')">&#128053; CHANTMONKEE &#128053;</div>
-                <div class="member neo" v-bind:class="{ active: memberFilter === 'NEOTREES' }"
-                    v-on:click="setMember('NEOTREES')">&#127794; NEOTREES &#127794;</div>
-                <div class="member toggy" v-bind:class="{ active: memberFilter === 'TOGGY' }"
-                    v-on:click="setMember('TOGGY')">&#128118; TOGGY &#128118;</div>
-                <div class="member nano" v-bind:class="{ active: memberFilter === 'NANO3' }"
-                    v-on:click="setMember('NANO3')">&#127799; NANO3 &#127799;</div>
+                <transition appear name="menu1">
+                    <div class="member bis" v-bind:class="{ active: memberFilter === 'BiS' }"
+                        v-on:click="setMember('BiS')">
+                        BiS</div>
+                </transition>
+                <transition appear name="menu2">
+                    <div class="member ito" v-bind:class="{ active: memberFilter === 'MUSENSiTEEBU' }"
+                        v-on:click="setMember('MUSENSiTEEBU')">&#129429; MUSENSiTEEBU &#129429;</div>
+                </transition>
+                <!--クリックでfilterをactive-->
+                <transition appear name="menu3">
+                    <div class="member chamo" v-bind:class="{ active: memberFilter === 'CHANTMONKEE' }"
+                        v-on:click="setMember('CHANTMONKEE')">&#128053; CHANTMONKEE &#128053;</div>
+                </transition>
+                <transition appear name="menu4">
+                    <div class="member neo" v-bind:class="{ active: memberFilter === 'NEOTREES' }"
+                        v-on:click="setMember('NEOTREES')">&#127794; NEOTREES &#127794;</div>
+                </transition>
+                <transition appear name="menu5">
+                    <div class="member toggy" v-bind:class="{ active: memberFilter === 'TOGGY' }"
+                        v-on:click="setMember('TOGGY')">&#128118; TOGGY &#128118;</div>
+                </transition>
+                <transition appear name="menu6">
+                    <div class="member nano" v-bind:class="{ active: memberFilter === 'NANO3' }"
+                        v-on:click="setMember('NANO3')">&#127799; NANO3 &#127799;</div>
+                </transition>
             </div>
         </div>
         <transition-group class="projects" name="projects">
