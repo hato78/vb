@@ -12,11 +12,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
 </head>
 <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+<script src="https://unpkg.com/vue-scrollto"></script>
 
 <body>
     <div id="app">
+        <a href="#" v-scroll-to="'#bottom'" class="return-bottom"><i class="fas fa-angle-double-down"></i></a>
+        <a href="#" v-scroll-to="'#top'" class="return-top"><i class="fas fa-angle-double-up"></i></a>
+
         <div class="title-container">
-            <div>
+            <div id="top">
                 <h1 class="title">
                     <img src="logo.png">
                     </h3>
@@ -69,8 +73,8 @@
             </div>
         </transition-group>
     </div>
-    <footer>
-        ©2022 v-BiS
+    <footer id="bottom">
+        ©2022 v-BiS <i class="fab fa-twitter"></i>
     </footer>
     <script>
         new Vue({
